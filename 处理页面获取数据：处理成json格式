@@ -1,0 +1,52 @@
+//example 
+//analysis: Object -> the Object got 3 attributes -> each attribute is an array -> every array got 3 Objects 
+//          -> each Object got 3 attributes 
+{ 
+    "programmers": [
+        { "firstName": "Brett", "lastName":"McLaughlin", "email": "aaaa" },
+        { "firstName": "Jason", "lastName":"Hunter", "email": "bbbb" },
+        { "firstName": "Elliotte", "lastName":"Harold", "email": "cccc" }
+    ],
+    "authors": [
+        { "firstName": "Isaac", "lastName": "Asimov", "genre": "science fiction" },
+        { "firstName": "Tad", "lastName": "Williams", "genre": "fantasy" },
+        { "firstName": "Frank", "lastName": "Peretti", "genre": "christian fiction" }
+    ],
+    "musicians": [
+        { "firstName": "Eric", "lastName": "Clapton", "instrument": "guitar" },
+        { "firstName": "Sergei", "lastName": "Rachmaninoff", "instrument": "piano" }
+        ] 
+}
+
+
+function constuctJson(){
+    var len = 3;
+    //set by yourself
+    var info = document.getElementsByClassName('info').value;
+    //jQuery: $('.info').val();
+    //fetch infos from <input>...
+    var oj = {}; 
+    //var oj = new Object();
+    oj.authors = [];
+    oj.musicians = [];
+    oj.programmers = []; 
+    //oj.programmers = new Array();
+    for(var i=0; i<len; i++){
+        oj.programmers[i] = {};
+        oj.musicians[i] = {};
+        oj.authors[i] = {};
+        //create Objects
+        oj.programmers[i].firstName = "";
+        oj.musicians[i].firstName = "";
+        oj.authors[i].firstName = "";
+        // create attribute 'firstName' and give it a value
+        oj.programmers[i].lastName = "";
+        oj.musicians[i].lastName = "";
+        oj.authors[i].lastName = "";
+        // create attribute 'lastName' and give it a value
+        oj.programmers[i].genre = "";
+        oj.musicians[i].genre = "";
+        oj.authors[i].genre = "";
+        // create attribute 'genre' and give it a value
+    }
+    
