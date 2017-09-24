@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页重构规范（自我总结）（例子：moojnn.com)</title>
+</head>
+<body>
+<header>
+	<div class="introduction">
+		<p>最外层用一个div包裹全部标签</p>
+		<p>将页面从上至下分为多个模块，创建多个并列div并语义化命名</p>
+		<p>每个模块再从左到右分，左右，中间，3个并排。。。把这些模块再用一个div包裹（居中适用问题）</p>
+		<p>分级，同级用div并排表示，分父子关系</p>
+		<p>博客式分栏是通过 position: absolute; -> right: 0; or left: 0;</p>
+		<p>左边导航栏的大小的随页面长度来控制的，主要控制的样式为: left: auto; max-height: ???px; position: fixed; top: ???px;</p>
+	</div>
+</header>
+<div class="entire">
+	<div class="header">
+		<div class="header_wrapper">
+			<div class="header_logo">
+				<img src="#">
+			</div>
+			<div class="header_info">
+				<h5><a href=""></a></h5>
+			</div>
+			<div class="header_bar">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="slider">
+		<div class="slider_wrapper">
+			<div></div>
+		</div>
+	</div>
+	<div class="project">
+		<div class="project_wrapper">
+			<div></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_wrapper">
+			<dir></dir>
+		</div>
+	</div>
+</div>
+</body>
+</html>
